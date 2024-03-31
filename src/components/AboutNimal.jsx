@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Why from './Why'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
+import Nimal from '../assets/Nimal.jpg'
 
 
 const AboutNimal = () => {
@@ -24,7 +25,7 @@ const AboutNimal = () => {
             <div className='mb-10'>
                 <div className='image flex lg:flex-row md:flex-col flex-col items-center gap-10 justify-center h-fit'>
                     <div data-aos="fade-right" data-aos-duration="2000" className='relative right-2' onMouseEnter={handleWrapperHover} onMouseLeave={handleWrapperLeave}>
-                        <img src="src\assets\Nimal.jpg" alt="logo" className="md:w-80 w-60 z-10 relative rounded" />
+                        <img src={Nimal} alt="logo" className="md:w-80 w-60 z-10 relative rounded" />
                         <div className='out rounded absolute border-4 border-yellow-400 left-3 top-3 md:w-80 md:h-80 w-60 h-60 z-0 transition-transform duration-300' style={{
                             transform: `translate(${out.left}px, ${out.top}px)`
                         }}></div>

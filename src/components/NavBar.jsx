@@ -4,6 +4,7 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Hero from "./Hero";
+import Logo from "../assets/Nimal's logo.png";
 
 const NavBar = () => {
 
@@ -26,7 +27,7 @@ const NavBar = () => {
                 <div className="cursor-pointer md:hidden" data-aos="fade-right" data-aos-duration="1000">
                     <Link to="home" spy="true" smooth="true" duration={500}>
                         <img
-                            src="src\assets\Nimal's logo.png"
+                            src={Logo}
                             alt="logo"
                             className="w-10"
                         />
@@ -35,7 +36,7 @@ const NavBar = () => {
                 <div className="cursor-pointer  hidden md:block" data-aos="fade-right" data-aos-duration="700">
                     <Link to="home" spy="true" smooth="true" duration={500}>
                         <img
-                            src="src\assets\Nimal's logo.png"
+                            src={Logo}
                             alt="logo"
                             className="w-20"
                         />
