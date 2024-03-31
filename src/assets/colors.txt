@@ -1,0 +1,33 @@
+font-title = #36384A
+common-font = #5D6071
+bg-color = #FFFCF4
+
+yellow = #FFCC27
+
+cards{
+    room-tour{
+        card = #C2B1E5
+        txt = #52215E
+    }
+    offer{
+        card = #F381A2
+        txt = #582A64
+    }
+    pricing{
+        card = #C3D58C
+        txt = #4B5F0F
+    }
+    inbox{
+        card = #FDDE6E
+        txt = #443D28
+    }
+    gallery{
+        card = #FCA684
+        txt = #8E481F
+    }
+    booknow{
+        card = #B6CEDA
+        txt = #044C70
+    }
+
+}
