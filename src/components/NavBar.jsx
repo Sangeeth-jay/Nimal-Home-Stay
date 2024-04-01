@@ -5,6 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Hero from "./Hero";
 import Logo from "../assets/Nimal's logo.png";
+import BookNow from "../components/modals/Book";
 
 const NavBar = () => {
 
@@ -17,6 +18,10 @@ const NavBar = () => {
     const closeMenu = () => {
         setMenu(false);
     }
+
+    const [open, setOpen] = useState(false);
+
+    const handleClose = () => setOpen(false);
 
     return (
         <>
@@ -73,7 +78,7 @@ const NavBar = () => {
                 </nav>
 
                 <div data-aos="fade-left" data-aos-duration="1000">
-                    <button class="hidden md:block font-istok text-md text-common relative px-3 py-0.5 rounded-md bg-transparent isolation-auto z-10 border-[3px]  before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-yellow-300 before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700">
+                    <button onClick={() => setOpen(true)} className="hidden md:block font-istok text-md text-common relative px-3 py-0.5 rounded-md bg-transparent isolation-auto border-[3px]  before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-yellow-300 before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700">
                         Book Now
                     </button>
                 </div>
@@ -121,6 +126,7 @@ const NavBar = () => {
             </div>
         </header>
         <Hero/>
+        <BookNow visible={open} onClose={handleClose}/>
         </>
     );
 };
