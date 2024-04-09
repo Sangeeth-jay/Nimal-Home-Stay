@@ -1,24 +1,70 @@
 import React from 'react'
-import BookNow from '../components/modals/Book'
-import { useState } from 'react'
+import { useState } from 'react';
+import { IoBed } from "react-icons/io5";
+import { MdBathtub } from "react-icons/md";
+import Lottie from 'lottie-react'
+import UserPic from "../assets/user.json";
+import BookNow from "../components/modals/Book";
+
+
 
 const Test = () => {
 
-    const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const handleClose = () => setOpen(false);
 
-    const handleClose = () => setOpen(false);
-    
-
-    return (
-        <>
-            <div className='flex flex-col justify-center items-center gap-7 h-screen'>
-                <button onClick={() => setOpen(true)} className="hidden md:block font-istok text-md text-common relative px-3 py-0.5 rounded-md bg-transparent isolation-auto  border-[3px]  before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-yellow-300 before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700">
-                    Book Now
-                </button>
+  return (
+    <>
+      <div className='flex lg:flex-row md:flex-row flex-col justify-center items-center h-screen'>
+        <div className=' h-full w-full flex justify-center items-center '>
+          <div className='lg:w-3/5 w-4/5  border-2  rounded-xl border-slate-100 flex flex-col justify-center items-center lg:gap-2 gap-1 lg:py-8 py-4'>
+            <div className='lg:w-40 lg:h-40 w-20 h-20 bg-slate-50 rounded-full mb-2'>
+              <Lottie animationData={UserPic} loop={true} />
             </div>
-            <BookNow visible={open} onClose={handleClose}/>
-        </>
-    )
+            <h1 className='lg:text-xl text-lg font-semibold font-domine text-title'>1 Person</h1>
+            <div className='flex flex-col items-start font-istok text-common text-sm'>
+              <div className='flex flex-row justify-center items-center gap-2'>
+                <IoBed />
+                <p>King Size Bed</p>
+              </div>
+              <div className='flex flex-row justify-center items-center gap-2'>
+                <MdBathtub />
+                <p className=''>Luxury Sanitary Facilities</p>
+              </div>
+            </div>
+            <h1 className='lg:text-2xl text-xl font-semibold font-domine text-title mb-2'>LKR 4500</h1>
+            <button onClick={() => setOpen(true)} className="font-istok  text-common  relative px-3 py-1 rounded-md bg-transparent isolation-auto border-[3px]  before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-[#04CAA3] before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700">
+              <span className='hover:text-white transition-all duration-300'>Book Now</span>
+            </button>
+          </div>
+        </div>
+        <div className=' h-full w-full flex justify-center items-center'>
+          <div className='lg:w-3/5 w-4/5  border-2  rounded-xl border-slate-100 flex flex-col justify-center items-center lg:gap-2 gap-1 lg:py-8 py-4'>
+            <div className=' bg-slate-50 rounded-full flex flex-row mb-2'>
+              <Lottie animationData={UserPic} loop={true} className='lg:w-40 w-20' />
+              <Lottie animationData={UserPic} loop={true} className='lg:w-40 w-20' />
+            </div>
+            <h1 className='text-xl font-semibold font-domine text-title'>2 People</h1>
+            <div className='flex flex-col items-start font-istok text-common'>
+              <div className='flex flex-row justify-center items-center gap-2'>
+                <IoBed />
+                <p>King Size Bed</p>
+              </div>
+              <div className='flex flex-row justify-center items-center gap-2'>
+                <MdBathtub />
+                <p className=''>Luxury Sanitary Facilities</p>
+              </div>
+            </div>
+            <h1 className='text-2xl font-semibold font-domine text-title mb-2'>LKR 5400</h1>
+            <button onClick={() => setOpen(true)} className="font-istok  text-common  relative px-3 py-1 rounded-md bg-transparent isolation-auto border-[3px]  before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-[#04CAA3] before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700">
+              <span className='hover:text-white transition-all duration-300'>Book Now</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <BookNow visible={open} onClose={handleClose} />
+    </>
+  )
 }
 
 export default Test

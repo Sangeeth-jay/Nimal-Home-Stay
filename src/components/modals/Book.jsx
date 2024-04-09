@@ -9,7 +9,7 @@ const Book = ({visible, onClose}) => {
   if(!visible) return null;
 
   return (
-    <div className='fixed inset-0 z-30 bg-black/30 backdrop-blur-sm flex justify-center items-center overflow-hidden' onClick={onClose}>
+    <div id='modal' className='fixed inset-0 z-30 bg-black/30 backdrop-blur-sm flex justify-center items-center overflow-hidden' onClick={onClose}>
       <div className='flex flex-col justify-center items-center gap-7 bg-white rounded-3xl shadow-md lg:w-1/4 lg:h-5/6 md:w-4/6 w-5/6 h-4/6 '>
         <div className=' bg-[#1A447D] flex flex-row justify-center items-center pr-2 rounded-md lg:w-9/12 md:w-1/2 w-5/6 h-14 shadow-md cursor-pointer hover:scale-110 ease-in-out duration-200 hover:shadow-lg' onClick={() => window.open('https://www.booking.com/searchresults.en-gb.html?aid=2127705&label=metagha-link-LULK-hotel-2570229_dev-desktop_los-1_bw-0_dow-Monday_defdate-1_room-0_gstadt-2_rateid-public_aud-0_gacid-_mcid-10_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20240401_ppt-&hca=m&no_rooms=1&show_room=257022901_366344710_2_2_0&edgtid=VQPFbF78QN-ft3H3g0Nb7A&ext_price_total=5405.20&efpc=GLAKGLAKLw&ts=1711894944&highlighted_hotels=2570229&checkin=2024-04-01&redirected=1&city=-2219694&hlrd=with_dates&group_adults=2&source=hotel&group_children=0&checkout=2024-04-02&keep_landing=1&sid=79a772a87aeca78b8b0f9c2019ed9343')}>
           <img src={Bico} alt="booking.com" className='w-10' />

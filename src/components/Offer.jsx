@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import Lottie from "lottie-react";
 import Room from "../assets/room.json";
 import Click from "../assets/click.json";
@@ -12,8 +13,13 @@ import Fork from "../assets/fork.json";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import PeopleThoughts from "./PeopleThoughts";
+import PackagesPortal from "../components/modals/Packages";
 
 const Offer = () => {
+
+    const [openPackageP, setOpenPackageP] = useState(false);
+    const handlePackageP = () => setOpenPackageP(false);
+
     return (
         <>
             <div className="lg:pl-60 lg:pr-60 md:pl-20 md:pr-20 pl-4 pr-4 pt-20" data-aos="fade-up" data-aos-duration="2000">
@@ -48,7 +54,7 @@ const Offer = () => {
                             </div>
                         </div>
 
-                        <div class="bg-[#C3D58C] p-4 shadow-md rounded-2xl cursor-pointer">
+                        <div class="bg-[#C3D58C] p-4 shadow-md rounded-2xl cursor-pointer" onClick={()=>setOpenPackageP(true)}>
                             <div className="flex justify-center">
                                 <Lottie animationData={Wallet} loop={true} className="lg:w-40 md:w-24" />
                             </div>
@@ -127,7 +133,7 @@ const Offer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="bg-[#C3D58C] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-between">
+                    <div className="bg-[#C3D58C] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-between" onClick={()=>setOpenPackageP(true)}>
                         <div>
                             <h1 className="text-xl font-semibold text-[#4B5F0F] font-domine">Pricing</h1>
                             <p class="font-domine text-xs text-[#4B5F0F] text-justify pt-1">As we offer good service
@@ -170,6 +176,7 @@ const Offer = () => {
                 </div>
             </div>
             <PeopleThoughts />
+            <PackagesPortal visiblePackageP={openPackageP} onClosePackageP={handlePackageP}/>
         </>
     )
 };
