@@ -14,11 +14,17 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import PeopleThoughts from "./PeopleThoughts";
 import PackagesPortal from "../components/modals/Packages";
+import ContactPortal from "./modals/Contact";
 
 const Offer = () => {
 
+    //Package portal
     const [openPackageP, setOpenPackageP] = useState(false);
     const handlePackageP = () => setOpenPackageP(false);
+
+    //Contact portal
+    const[openContactP, setOpenContactP] = useState(false);
+    const handleContactP = () => setOpenContactP(false);
 
     return (
         <>
@@ -66,7 +72,7 @@ const Offer = () => {
                             </div>
                         </div>
 
-                        <div class="bg-[#FDDE6E] p-4 shadow-md rounded-2xl flex flex-col justify-between cursor-pointer">
+                        <div class="bg-[#FDDE6E] p-4 shadow-md rounded-2xl flex flex-col justify-between cursor-pointer" onClick={()=>setOpenContactP(true)}>
                             <div>
                                 <h2 class="lg:text-2xl md:text-xl font-bold mb-2 font-domine text-[#443D28]">Inbox</h2>
                                 <p class="font-domine text-[#443D28] md:text-sm">If you have any doubts,
@@ -144,7 +150,7 @@ const Offer = () => {
                             <Lottie animationData={Wallet} loop={true} className="w-60" />
                         </div>
                     </div>
-                    <div className="bg-[#FDDE6E] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-between">
+                    <div className="bg-[#FDDE6E] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-between" onClick={()=>setOpenContactP(true)}>
                         <div>
                             <h1 className="text-xl font-semibold text-[#443D28] font-domine">Inbox</h1>
                             <p class="font-domine text-xs text-[#443D28] text-justify pt-1">If you have any doubts,
@@ -177,6 +183,7 @@ const Offer = () => {
             </div>
             <PeopleThoughts />
             <PackagesPortal visiblePackageP={openPackageP} onClosePackageP={handlePackageP}/>
+            <ContactPortal visibleContactP={openContactP} onCloseContactP={handleContactP}/>
         </>
     )
 };
