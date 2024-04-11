@@ -15,7 +15,9 @@ import 'aos/dist/aos.css';
 import PeopleThoughts from "./PeopleThoughts";
 import PackagesPortal from "../components/modals/Packages";
 import ContactPortal from "./modals/Contact";
-
+import BookPortal from "./modals/Book";
+import FacilitiesPortal from "./modals/Facilities";
+import FacilitiesMobilePortal from "./modals/FacilitiesMobile";
 const Offer = () => {
 
     //Package portal
@@ -25,6 +27,18 @@ const Offer = () => {
     //Contact portal
     const[openContactP, setOpenContactP] = useState(false);
     const handleContactP = () => setOpenContactP(false);
+
+    //Booking portal
+    const [open, setOpen] = useState(false);
+    const handleClose = () => setOpen(false);
+
+    //Facilities portal
+    const [openFacilitiesP, setOpenFacilitiesP] = useState(false);
+    const handleFacilitiesP = () => setOpenFacilitiesP(false);
+
+    //Facilities mobile portal
+    const [openFacilitiesM, setOpenFacilitiesM] = useState(false);
+    const handleFacilitiesM = () => setOpenFacilitiesM(false);
 
     return (
         <>
@@ -44,7 +58,7 @@ const Offer = () => {
                         </div>
 
 
-                        <div class="col-span-2 bg-[#F381A2] p-4 shadow-md rounded-2xl flex flex-col justify-between cursor-pointer">
+                        <div class="col-span-2 bg-[#F381A2] p-4 shadow-md rounded-2xl flex flex-col justify-between cursor-pointer" onClick={()=>setOpenFacilitiesP(true)}>
                             <div className="flex justify-end">
                                 <div className="flex flex-row gap-6 lg:w-60 md:w-40">
                                     <Lottie animationData={Wifi} loop={true} className="lg:w-20 md:w-16" />
@@ -96,7 +110,7 @@ const Offer = () => {
 
                         </div>
 
-                        <div class="bg-[#B6CEDA] p-4 shadow-md rounded-2xl flex flex-col items-center justify-evenly cursor-pointer">
+                        <div class="bg-[#B6CEDA] p-4 shadow-md rounded-2xl flex flex-col items-center justify-evenly cursor-pointer" onClick={()=>setOpen(true)}>
                             <div>
                                 <h2 class="text-4xl font-bold mb-2 font-domine text-[#044C70]">Book Now</h2>
                             </div>
@@ -124,7 +138,7 @@ const Offer = () => {
                             <Lottie animationData={Room} loop={true} className="w-60" />
                         </div>
                     </div>
-                    <div className="bg-[#F381A2] p-4 shadow-md rounded-2xl w-11/12 h-80 flex flex-col justify-between ">
+                    <div className="bg-[#F381A2] p-4 shadow-md rounded-2xl w-11/12 h-80 flex flex-col justify-between " onClick={()=>setOpenFacilitiesM(true)}>
                         <div>
                             <h1 className="text-xl font-semibold text-[#582A64] font-domine">What we offer</h1>
                             <p class="font-domine text-xs text-[#582A64] text-justify pt-1">We offer everything you want unconditionally
@@ -171,7 +185,7 @@ const Offer = () => {
                             <Lottie animationData={Gallery} loop={true} className="w-60" />
                         </div>
                     </div>
-                    <div className="bg-[#B6CEDA] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-center">                    <div>
+                    <div className="bg-[#B6CEDA] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-center" onClick={()=>setOpen(true)}>                    <div>
                         <h1 className="text-3xl text-center font-semibold text-[#52215E] font-domine">Book Now</h1>
 
                     </div>
@@ -184,6 +198,9 @@ const Offer = () => {
             <PeopleThoughts />
             <PackagesPortal visiblePackageP={openPackageP} onClosePackageP={handlePackageP}/>
             <ContactPortal visibleContactP={openContactP} onCloseContactP={handleContactP}/>
+            <BookPortal visible={open} onClose={handleClose}/>
+            <FacilitiesPortal visibleFacilitiesP={openFacilitiesP} onCloseFaclitiesP={handleFacilitiesP}/>
+            <FacilitiesMobilePortal visibleFacilitiesM={openFacilitiesM} onCloseFaclitiesM={handleFacilitiesM}/>
         </>
     )
 };
