@@ -1,7 +1,6 @@
 import React from 'react'
 import { useRef, useEffect, useState } from 'react'
 import gsap from 'gsap';
-import AboutNimal from './AboutNimal';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import BookNow from '../components/modals/Book';
@@ -45,8 +44,8 @@ const Hero = () => {
     return (
         <>
             <div className='flex flex-col justify-center items-center h-screen text-center overflow-hidden'>
-                <div ref={headingRef} style={{ position: 'relative' }} data-aos="zoom-in-up" data-aos-duration="1000">
-                    <h1 className="text-8xl font-bold font-istok text-title hidden lg:block">Nimal's Home-Stay</h1>
+                <div ref={headingRef} style={{ position: 'relative' }} data-aos="zoom-in-up" data-aos-duration="1000" className='hidden lg:block'>
+                    <h1 className="text-8xl font-bold font-istok text-title">Nimal's Home-Stay</h1>
                 </div>
                 <h1 className='lg:hidden p-2' data-aos="zoom-in-up" data-aos-duration="1000"><span className="md:text-7xl text-6xl font-bold font-istok text-title">Nimal's</span><br /><span className='text-4xl font-bold font-istok text-title'>Home-Stay</span></h1>
                 <p className=" font-serif text-common text-xl  px-3" data-aos="zoom-in-up" data-aos-duration="1100">Ayubowan 👋 Welcome to your home away from home!<br />
@@ -57,7 +56,6 @@ const Hero = () => {
                     Book Now
                 </button>
             </div>
-            <AboutNimal />
             <BookNow visible={open} onClose={handleClose}/>
         </>
     )

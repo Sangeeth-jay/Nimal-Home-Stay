@@ -5,7 +5,6 @@ import Snorkling from '../assets/snorkling.json'
 import RoadTrip from '../assets/road-trip.json'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
-import Offer from './Offer'
 
 const Why = () => {
   return (
@@ -55,7 +54,6 @@ const Why = () => {
       </div>
 
     </div>
-    <Offer/>
     </>
   )
 }

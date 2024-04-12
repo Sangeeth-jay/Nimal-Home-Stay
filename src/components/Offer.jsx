@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import Lottie from "lottie-react";
 import Room from "../assets/room.json";
-import Click from "../assets/click.json";
 import Wallet from "../assets/wallet.json";
 import Inbox from "../assets/inbox.json";
 import Arrow from "../assets/arrow.json";
@@ -12,7 +11,6 @@ import Wifi from "../assets/wifi.json";
 import Fork from "../assets/fork.json";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import PeopleThoughts from "./PeopleThoughts";
 import PackagesPortal from "../components/modals/Packages";
 import ContactPortal from "./modals/Contact";
 import BookPortal from "./modals/Book";
@@ -195,7 +193,6 @@ const Offer = () => {
                     </div>
                 </div>
             </div>
-            <PeopleThoughts />
             <PackagesPortal visiblePackageP={openPackageP} onClosePackageP={handlePackageP}/>
             <ContactPortal visibleContactP={openContactP} onCloseContactP={handleContactP}/>
             <BookPortal visible={open} onClose={handleClose}/>

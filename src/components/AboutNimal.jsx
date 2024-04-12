@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react'
-import Why from './Why'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 import Nimal from '../assets/Nimal.jpg'
@@ -40,7 +39,6 @@ const AboutNimal = () => {
                     </div>
                 </div>
             </div>
-            <Why/>
         </>
     )
 }

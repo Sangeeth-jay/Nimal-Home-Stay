@@ -3,7 +3,6 @@ import { Link } from "react-scroll";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Hero from "./Hero";
 import Logo from "../assets/Nimal's logo.png";
 import BookNow from "../components/modals/Book";
 
@@ -125,7 +124,6 @@ const NavBar = () => {
 
             </div>
         </header>
-        <Hero/>
         <BookNow visible={open} onClose={handleClose}/>
         </>
     );
