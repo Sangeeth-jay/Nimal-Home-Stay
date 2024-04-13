@@ -5,6 +5,9 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Logo from "../assets/Nimal's logo.png";
 import BookNow from "../components/modals/Book";
+import Offer from "./Offer";
+import Contact from "./Contact";
+import Home from "./Hero";
 
 const NavBar = () => {
 
@@ -57,7 +60,7 @@ const NavBar = () => {
                         Home
                     </Link>
                     <Link
-                        to="facilities"
+                        to="offer"
                         spy="true"
                         smooth="true"
                         duration={500}
@@ -104,7 +107,7 @@ const NavBar = () => {
                     Home
                 </Link>
                 <Link
-                    to="facilities"
+                    to="offer"
                     spy="true"
                     smooth="true"
                     duration={500}

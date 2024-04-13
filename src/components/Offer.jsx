@@ -40,6 +40,7 @@ const Offer = () => {
 
     return (
         <>
+            <section id="offer">
             <div className="lg:pl-60 lg:pr-60 md:pl-20 md:pr-20 pl-4 pr-4 pt-20" data-aos="fade-up" data-aos-duration="2000">
 
                 {/* desktop & tablet view */}
@@ -198,6 +199,7 @@ const Offer = () => {
             <BookPortal visible={open} onClose={handleClose}/>
             <FacilitiesPortal visibleFacilitiesP={openFacilitiesP} onCloseFaclitiesP={handleFacilitiesP}/>
             <FacilitiesMobilePortal visibleFacilitiesM={openFacilitiesM} onCloseFaclitiesM={handleFacilitiesM}/>
+            </section>
         </>
     )
 };
