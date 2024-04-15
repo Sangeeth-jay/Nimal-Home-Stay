@@ -16,6 +16,8 @@ import ContactPortal from "./modals/Contact";
 import BookPortal from "./modals/Book";
 import FacilitiesPortal from "./modals/Facilities";
 import FacilitiesMobilePortal from "./modals/FacilitiesMobile";
+import RoomTour from './modals/Room';
+
 const Offer = () => {
 
     //Package portal
@@ -38,6 +40,10 @@ const Offer = () => {
     const [openFacilitiesM, setOpenFacilitiesM] = useState(false);
     const handleFacilitiesM = () => setOpenFacilitiesM(false);
 
+    //Room tour portal
+    const [openRoomP, setOpenRoomP] = useState(false);
+    const handleRoomP = () => setOpenRoomP(false);
+
     return (
         <>
             <section id="offer">
@@ -47,7 +53,7 @@ const Offer = () => {
                 <div class="lg:flex md:flex justify-center items-center min-h-screen sm: hidden">
                     <div class="lg:grid md:grid grid-cols-3 grid-rows-3 gap-4">
 
-                        <div class="row-span-2 bg-[#C2B1E5] p-4 shadow-md rounded-2xl flex flex-col justify-between lg:gap-20 md:gap-10 cursor-pointer">
+                        <div class="row-span-2 bg-[#C2B1E5] p-4 shadow-md rounded-2xl flex flex-col justify-between lg:gap-20 md:gap-10 cursor-pointer" onClick={()=>setOpenRoomP(true)}>
                             <div>
                                 <h2 class="lg:text-2xl md:text-xl font-bold mb-2 font-domine text-[#52215E]">Room Tour</h2>
                                 <p class="font-domine md:text-sm text-[#52215E]">We offer luxury room facilities,
@@ -127,7 +133,7 @@ const Offer = () => {
                 {/* mobile view */}
 
                 <div className="lg:hidden md:hidden flex flex-col gap-6 justify-center items-center">
-                    <div className="bg-[#C2B1E5] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-between">
+                    <div className="bg-[#C2B1E5] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-between" onClick={()=>setOpenRoomP(true)}>
                         <div>
                             <h1 className="text-xl font-semibold text-[#52215E] font-domine">Room Tour</h1>
                             <p class="font-domine text-xs text-[#52215E] text-justify pt-1">We offer luxury room facilities,
@@ -199,6 +205,7 @@ const Offer = () => {
             <BookPortal visible={open} onClose={handleClose}/>
             <FacilitiesPortal visibleFacilitiesP={openFacilitiesP} onCloseFaclitiesP={handleFacilitiesP}/>
             <FacilitiesMobilePortal visibleFacilitiesM={openFacilitiesM} onCloseFaclitiesM={handleFacilitiesM}/>
+            <RoomTour visibleRoomP={openRoomP} onCloseRoomP={handleRoomP}/>
             </section>
         </>
     )
