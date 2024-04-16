@@ -29,7 +29,7 @@ const Packages = ({ visiblePackageP, onClosePackageP }) => {
       <div className='flex lg:flex-row md:flex-row flex-col justify-center items-center rounded-3xl lg:w-8/12 md:w-10/12 w-5/6 lg:h-4/5 md:h-4/6 h-full'>
         <div className=' h-full w-full flex justify-center items-center '>
           <div className='lg:w-4/5 w-5/6 bg-white rounded-2xl lg:p-4 p-1 shadow-md'>
-            <div className='border-2  rounded-xl shadow-2xl shadow-blue-500/20 border-[#04caa267] flex flex-col justify-center items-center lg:gap-2 gap-1 lg:py-8 py-4'>
+            <div className='rounded-xl flex flex-col justify-center items-center lg:gap-2 gap-1 lg:py-8 py-4'>
               <div className='lg:w-40 lg:h-40 w-20 h-20 bg-slate-50 rounded-full mb-2'>
                 <Lottie animationData={UserPic} loop={true} />
               </div>
@@ -53,7 +53,7 @@ const Packages = ({ visiblePackageP, onClosePackageP }) => {
         </div>
         <div className=' h-full w-full flex justify-center items-center'>
           <div className='bg-white lg:w-4/5 w-5/6 rounded-2xl lg:p-4 p-1 shadow-md'>
-            <div className='  border-2  rounded-xl shadow-2xl shadow-blue-500/20 border-[#04caa267] flex flex-col justify-center items-center lg:gap-2 gap-1 lg:py-8 py-4'>
+            <div className='rounded-xl flex flex-col justify-center items-center lg:gap-2 gap-1 lg:py-8 py-4'>
               <div className=' bg-slate-50 rounded-full flex flex-row mb-2'>
                 <Lottie animationData={UserPic} loop={true} className='lg:w-40 w-20' />
                 <Lottie animationData={UserPic} loop={true} className='lg:w-40 w-20' />
