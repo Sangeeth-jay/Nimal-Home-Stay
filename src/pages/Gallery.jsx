@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { BsArrowRightCircleFill, BsArrowLeftCircleFill } from "react-icons/bs";
 import Logo from "../assets/Nimal's logo.png";
 import Img1 from "../assets/406661879.jpg";
@@ -77,22 +79,22 @@ const Gallery = () => {
   return (
     <>
       <div className='flex flex-col justify-center items-center'>
-        <div>
+        <div data-aos="fade-down" data-aos-duration="1200">
           <Link to={"/"}>
             <img src={Logo} alt="" className='w-32 mt-2' />
           </Link>
         </div>
         <div className='text-center'>
-          <h1 className='text-3xl text-title font-semibold font-istok'>What happen here?</h1>
-          <p className='text-common font-serif'>Get some ideas through the gallery</p>
+          <h1 className='text-3xl text-title font-semibold font-istok' data-aos="fade-down" data-aos-duration="1600">What happen here?</h1>
+          <p className='text-common font-serif' data-aos="fade-down" data-aos-duration="2000">Get some ideas through the gallery</p>
         </div>
         <div className='w-full px-4'>
-          <hr className='border-t-2 border-[#D3D3D3] my-4' />
+          <hr className='border-t-2 border-[#D3D3D3] my-4' data-aos="fade-up" data-aos-duration="2000" />
         </div>
 
         <div className='w-full'>
 
-          <div className="lg:grid lg:grid-cols-3 lg:grid-rows-4 lg:gap-4 md:grid md:grid-cols-3 md:grid-rows-4 md:gap-4 flex flex-col gap-3 px-6">
+          <div data-aos="fade-up" data-aos-duration="3000" className="lg:grid lg:grid-cols-3 lg:grid-rows-4 lg:gap-4 md:grid md:grid-cols-3 md:grid-rows-4 md:gap-4 flex flex-col gap-3 px-6">
             <div onClick={() => openModal(0)} className="row-span-2 relative cursor-pointer transform hover:scale-105 transition duration-500 ease-in-out hover:brightness-110">
               <img src={gallery[0].img} alt="" className='object-cover w-full h-full rounded' />
               <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-end'>
@@ -156,5 +158,7 @@ const Gallery = () => {
     </>
   )
 }
+
+AOS.init();
 
 export default Gallery
