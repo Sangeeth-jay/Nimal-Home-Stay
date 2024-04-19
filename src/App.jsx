@@ -1,17 +1,20 @@
 import { useState } from 'react'
 import './App.css'
-import NavBar from './components/NavBar'
-import Hero from './components/Hero'
+import { BrowserRouter as Routers, Routes, Route } from 'react-router-dom'
 import Test from './components/Test'
-import Combine from './Combine'
+import Home from './Combine'
+import Gallery from './pages/Gallery'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      {/* <NavBar/> */}
-      {/* <Test/> */}
-      <Combine/>
+      <Routers>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/gallery' element={<Gallery />} />
+        </Routes>
+      </Routers>
     </>
   )
 }

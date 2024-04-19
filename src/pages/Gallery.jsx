@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { BsArrowRightCircleFill, BsArrowLeftCircleFill } from "react-icons/bs";
 import Logo from "../assets/Nimal's logo.png";
 import Img1 from "../assets/406661879.jpg";
@@ -10,7 +11,7 @@ import Img5 from "../assets/img_9232.jpg";
 import Img6 from "../assets/053.jpg";
 import Img7 from "../assets/108194519.jpg";
 
-const Test = () => {
+const Gallery = () => {
 
   const gallery = [
     {
@@ -71,13 +72,15 @@ const Test = () => {
   const handleNext = () => {
     setCurrentIndex(currentIndex => currentIndex < gallery.length - 1 ? currentIndex + 1 : 0);
   }
-  
+
 
   return (
     <>
       <div className='flex flex-col justify-center items-center'>
         <div>
-          <img src={Logo} alt="" className='w-32 mt-2' />
+          <Link to={"/"}>
+            <img src={Logo} alt="" className='w-32 mt-2' />
+          </Link>
         </div>
         <div className='text-center'>
           <h1 className='text-3xl text-title font-semibold font-istok'>What happen here?</h1>
@@ -91,7 +94,7 @@ const Test = () => {
 
           <div className="lg:grid lg:grid-cols-3 lg:grid-rows-4 lg:gap-4 md:grid md:grid-cols-3 md:grid-rows-4 md:gap-4 flex flex-col gap-3 px-6">
             <div onClick={() => openModal(0)} className="row-span-2 relative cursor-pointer transform hover:scale-105 transition duration-500 ease-in-out hover:brightness-110">
-              <img src={gallery[0].img} alt="" className='object-cover w-full h-full rounded'/>
+              <img src={gallery[0].img} alt="" className='object-cover w-full h-full rounded' />
               <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-end'>
                 <p className='text-common font-serif bg-white'>{gallery[0].title}</p>
               </div>
@@ -109,25 +112,25 @@ const Test = () => {
               </div>
             </div>
             <div onClick={() => openModal(2)} className="col-start-3 row-start-1 relative cursor-pointer transform hover:scale-105 transition duration-500 ease-in-out hover:brightness-110">
-              <img src={gallery[2].img} alt="" className='object-cover w-full h-full rounded'  />
+              <img src={gallery[2].img} alt="" className='object-cover w-full h-full rounded' />
               <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-end'>
                 <p className='text-common font-serif bg-white'>{gallery[2].title}</p>
               </div>
             </div>
             <div onClick={() => openModal(3)} className="relative cursor-pointer transform hover:scale-105 transition duration-500 ease-in-out hover:brightness-110">
-              <img src={gallery[3].img} alt="" className='object-cover w-full h-full rounded'  />
+              <img src={gallery[3].img} alt="" className='object-cover w-full h-full rounded' />
               <div>
                 <p className='text-common font-serif bg-white'>{gallery[3].title}</p>
               </div>
             </div>
             <div onClick={() => openModal(5)} className="col-start-2 row-start-3 relative cursor-pointer transform hover:scale-105 transition duration-500 ease-in-out hover:brightness-110">
-              <img src={gallery[5].img} alt="" className='object-cover w-full h-full rounded'  />
+              <img src={gallery[5].img} alt="" className='object-cover w-full h-full rounded' />
               <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-end'>
                 <p className='text-common font-serif bg-white'>{gallery[5].title}</p>
               </div>
             </div>
             <div onClick={() => openModal(6)} className="row-span-2 col-start-3 row-start-2 relative cursor-pointer transform hover:scale-105 transition duration-500 ease-in-out hover:brightness-110">
-              <img src={gallery[6].img} alt="" className='object-cover w-full h-full rounded'  />
+              <img src={gallery[6].img} alt="" className='object-cover w-full h-full rounded' />
               <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-end'>
                 <p className='text-common font-serif bg-white'>{gallery[6].title}</p>
               </div>
@@ -142,10 +145,10 @@ const Test = () => {
           <div className='relative'>
             <img src={gallery[currentIndex].img} alt="" className='lg:max-w-4xl h-auto rounded-sm' onClick={(e) => e.stopPropagation()} />
             <div className='absolute top-1/2 transform -translate-y-1/2 left-0 pl-2'>
-              <BsArrowLeftCircleFill className='cursor-pointer text-white text-4xl opacity-45 hover:opacity-90 ease-in-out duration-200' onClick={handlePrev}/>
+              <BsArrowLeftCircleFill className='cursor-pointer text-white text-4xl opacity-45 hover:opacity-90 ease-in-out duration-200' onClick={handlePrev} />
             </div>
             <div className='absolute top-1/2 transform -translate-y-1/2 right-0 pr-2'>
-              <BsArrowRightCircleFill className='cursor-pointer text-white text-4xl opacity-45 hover:opacity-90 ease-in-out duration-200' onClick={handleNext}/>
+              <BsArrowRightCircleFill className='cursor-pointer text-white text-4xl opacity-45 hover:opacity-90 ease-in-out duration-200' onClick={handleNext} />
             </div>
           </div>
         </div>
@@ -154,4 +157,4 @@ const Test = () => {
   )
 }
 
-export default Test
+export default Gallery
