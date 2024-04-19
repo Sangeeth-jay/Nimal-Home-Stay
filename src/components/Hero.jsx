@@ -16,8 +16,8 @@ const Hero = () => {
             const mouseX = e.clientX;
             const mouseY = e.clientY;
 
-            const moveAmountY = 20;
-            const moveAmountX = 20;
+            const moveAmountY = 10;
+            const moveAmountX = 10;
 
             const translateX = (mouseX - window.innerWidth / 2) / moveAmountX;
             const translateY = (mouseY - window.innerHeight / 2) / moveAmountY;

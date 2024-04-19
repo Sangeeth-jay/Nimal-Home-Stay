@@ -29,7 +29,7 @@ const AboutNimal = () => {
                             transform: `translate(${out.left}px, ${out.top}px)`
                         }}></div>
                     </div>
-                    <div data-aos="fade-left" data-aos-duration="2000" className='description lg:text-left md:text-center text-center'>
+                    <div data-aos="fade-up" data-aos-duration="2000" className='description lg:text-left md:text-center text-center'>
                         <h1 className='md:text-4xl text-2xl font-bold font-istok text-title'>👋 Ayubowan, lovely people!</h1>
                         <p className='lg:text-xl md:text-lg text-md font-serif text-common lg:ml-10 mt-4 p-2 lg:w-96'> I am Nimal, and I welcome you to<br />
                             Sri Lanka🫶!
