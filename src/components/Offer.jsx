@@ -135,7 +135,7 @@ const Offer = () => {
                     {/* mobile view */}
 
                     <div className="lg:hidden md:hidden flex flex-col gap-6 justify-center items-center">
-                        <div className="bg-[#C2B1E5] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-between cursor-pointer hover:scale-105 duration-300 ease-in-out" onClick={() => setOpenRoomP(true)}>
+                        <div className="bg-[#C2B1E5] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-between cursor-pointer transform hover:scale-105 duration-500 ease-in-out" onClick={() => setOpenRoomP(true)}>
                             <div>
                                 <h1 className="text-xl font-semibold text-[#52215E] font-domine">Room Tour</h1>
                                 <p class="font-domine text-xs text-[#52215E] text-justify pt-1">We offer luxury room facilities,
@@ -145,7 +145,7 @@ const Offer = () => {
                                 <Lottie animationData={Room} loop={true} className="w-60" />
                             </div>
                         </div>
-                        <div className="bg-[#F381A2] p-4 shadow-md rounded-2xl w-11/12 h-80 flex flex-col justify-between cursor-pointer hover:scale-105 duration-300 ease-in-out" onClick={() => setOpenFacilitiesM(true)}>
+                        <div className="bg-[#F381A2] p-4 shadow-md rounded-2xl w-11/12 h-80 flex flex-col justify-between cursor-pointer transform hover:scale-105 duration-500 ease-in-out" onClick={() => setOpenFacilitiesM(true)}>
                             <div>
                                 <h1 className="text-xl font-semibold text-[#582A64] font-domine">What we offer</h1>
                                 <p class="font-domine text-xs text-[#582A64] text-justify pt-1">We offer everything you want unconditionally
@@ -160,7 +160,7 @@ const Offer = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="bg-[#C3D58C] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-between cursor-pointer hover:scale-105 duration-300 ease-in-out" onClick={() => setOpenPackageP(true)}>
+                        <div className="bg-[#C3D58C] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-between cursor-pointer transform hover:scale-105 duration-500 ease-in-out" onClick={() => setOpenPackageP(true)}>
                             <div>
                                 <h1 className="text-xl font-semibold text-[#4B5F0F] font-domine">Pricing</h1>
                                 <p class="font-domine text-xs text-[#4B5F0F] text-justify pt-1">As we offer good service
@@ -171,7 +171,7 @@ const Offer = () => {
                                 <Lottie animationData={Wallet} loop={true} className="w-60" />
                             </div>
                         </div>
-                        <div className="bg-[#FDDE6E] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-between cursor-pointer hover:scale-105 duration-300 ease-in-out" onClick={() => setOpenContactP(true)}>
+                        <div className="bg-[#FDDE6E] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-between cursor-pointer transform hover:scale-105 duration-500 ease-in-out" onClick={() => setOpenContactP(true)}>
                             <div>
                                 <h1 className="text-xl font-semibold text-[#443D28] font-domine">Inbox</h1>
                                 <p class="font-domine text-xs text-[#443D28] text-justify pt-1">If you have any doubts,
@@ -182,7 +182,7 @@ const Offer = () => {
                                 <Lottie animationData={Inbox} loop={true} className="w-40" />
                             </div>
                         </div>
-                        <div className="bg-[#FCA684] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-between cursor-pointer hover:scale-105 duration-300 ease-in-out">
+                        <div className="bg-[#FCA684] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-between cursor-pointer transform hover:scale-105 duration-500 ease-in-out">
                             <Link to="/gallery">
                                 <div>
                                     <h1 className="text-xl font-semibold text-[#8E481F] font-domine">Gallery</h1>
@@ -194,7 +194,7 @@ const Offer = () => {
                                 </div>
                             </Link>
                         </div>
-                        <div className="bg-[#B6CEDA] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-center cursor-pointer hover:scale-105 duration-300 ease-in-out" onClick={() => setOpen(true)}>                    <div>
+                        <div className="bg-[#B6CEDA] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-center cursor-pointer transform hover:scale-105 duration-500 ease-in-out" onClick={() => setOpen(true)}>                    <div>
                             <h1 className="text-3xl text-center font-semibold text-[#52215E] font-domine">Book Now</h1>
 
                         </div>
