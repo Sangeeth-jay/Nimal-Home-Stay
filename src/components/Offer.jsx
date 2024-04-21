@@ -54,7 +54,7 @@ const Offer = () => {
                     <div class="lg:flex md:flex justify-center items-center min-h-screen sm: hidden">
                         <div class="lg:grid md:grid grid-cols-3 grid-rows-3 gap-4">
 
-                            <div class="row-span-2 bg-[#C2B1E5] p-4 shadow-md rounded-2xl flex flex-col justify-between lg:gap-20 md:gap-10 cursor-pointer" onClick={() => setOpenRoomP(true)}>
+                            <div class="row-span-2 bg-[#C2B1E5] p-4 shadow-md rounded-2xl flex flex-col justify-between lg:gap-20 md:gap-10 cursor-pointer hover:scale-105 duration-300 ease-in-out" onClick={() => setOpenRoomP(true)}>
                                 <div>
                                     <h2 class="lg:text-2xl md:text-xl font-bold mb-2 font-domine text-[#52215E]">Room Tour</h2>
                                     <p class="font-domine md:text-sm text-[#52215E]">We offer luxury room facilities,
@@ -64,7 +64,7 @@ const Offer = () => {
                             </div>
 
 
-                            <div class="col-span-2 bg-[#F381A2] p-4 shadow-md rounded-2xl flex flex-col justify-between cursor-pointer" onClick={() => setOpenFacilitiesP(true)}>
+                            <div class="col-span-2 bg-[#F381A2] p-4 shadow-md rounded-2xl flex flex-col justify-between cursor-pointer hover:scale-105 duration-300 ease-in-out" onClick={() => setOpenFacilitiesP(true)}>
                                 <div className="flex justify-end">
                                     <div className="flex flex-row gap-6 lg:w-60 md:w-40">
                                         <Lottie animationData={Wifi} loop={true} className="lg:w-20 md:w-16" />
@@ -80,7 +80,7 @@ const Offer = () => {
                                 </div>
                             </div>
 
-                            <div class="bg-[#C3D58C] p-4 shadow-md rounded-2xl cursor-pointer" onClick={() => setOpenPackageP(true)}>
+                            <div class="bg-[#C3D58C] p-4 shadow-md rounded-2xl cursor-pointer hover:scale-105 duration-300 ease-in-out" onClick={() => setOpenPackageP(true)}>
                                 <div className="flex justify-center">
                                     <Lottie animationData={Wallet} loop={true} className="lg:w-40 md:w-24" />
                                 </div>
@@ -92,7 +92,7 @@ const Offer = () => {
                                 </div>
                             </div>
 
-                            <div class="bg-[#FDDE6E] p-4 shadow-md rounded-2xl flex flex-col justify-between cursor-pointer" onClick={() => setOpenContactP(true)}>
+                            <div class="bg-[#FDDE6E] p-4 shadow-md rounded-2xl flex flex-col justify-between cursor-pointer hover:scale-105 duration-300 ease-in-out" onClick={() => setOpenContactP(true)}>
                                 <div>
                                     <h2 class="lg:text-2xl md:text-xl font-bold mb-2 font-domine text-[#443D28]">Inbox</h2>
                                     <p class="font-domine text-[#443D28] md:text-sm">If you have any doubts,
@@ -104,7 +104,7 @@ const Offer = () => {
                                 </div>
                             </div>
 
-                            <div class="col-span-2 bg-[#FCA684] p-4 shadow-md rounded-2xl flex flex-col justify-between cursor-pointer">
+                            <div class="col-span-2 bg-[#FCA684] p-4 shadow-md rounded-2xl flex flex-col justify-between cursor-pointer hover:scale-105 duration-300 ease-in-out">
                                 <Link to="/gallery">
                                     <div className="flex justify-end">
                                         <Lottie animationData={Gallery} loop={true} className="lg:w-40 md:w-20" />
@@ -117,7 +117,7 @@ const Offer = () => {
                                 </Link>
                             </div>
 
-                            <div class="bg-[#B6CEDA] p-4 shadow-md rounded-2xl flex flex-col items-center justify-evenly cursor-pointer" onClick={() => setOpen(true)}>
+                            <div class="bg-[#B6CEDA] p-4 shadow-md rounded-2xl flex flex-col items-center justify-evenly cursor-pointer hover:scale-105 duration-300 ease-in-out" onClick={() => setOpen(true)}>
                                 <div>
                                     <h2 class="text-4xl font-bold mb-2 font-domine text-[#044C70]">Book Now</h2>
                                 </div>
@@ -135,7 +135,7 @@ const Offer = () => {
                     {/* mobile view */}
 
                     <div className="lg:hidden md:hidden flex flex-col gap-6 justify-center items-center">
-                        <div className="bg-[#C2B1E5] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-between" onClick={() => setOpenRoomP(true)}>
+                        <div className="bg-[#C2B1E5] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-between cursor-pointer hover:scale-105 duration-300 ease-in-out" onClick={() => setOpenRoomP(true)}>
                             <div>
                                 <h1 className="text-xl font-semibold text-[#52215E] font-domine">Room Tour</h1>
                                 <p class="font-domine text-xs text-[#52215E] text-justify pt-1">We offer luxury room facilities,
@@ -145,7 +145,7 @@ const Offer = () => {
                                 <Lottie animationData={Room} loop={true} className="w-60" />
                             </div>
                         </div>
-                        <div className="bg-[#F381A2] p-4 shadow-md rounded-2xl w-11/12 h-80 flex flex-col justify-between " onClick={() => setOpenFacilitiesM(true)}>
+                        <div className="bg-[#F381A2] p-4 shadow-md rounded-2xl w-11/12 h-80 flex flex-col justify-between cursor-pointer hover:scale-105 duration-300 ease-in-out" onClick={() => setOpenFacilitiesM(true)}>
                             <div>
                                 <h1 className="text-xl font-semibold text-[#582A64] font-domine">What we offer</h1>
                                 <p class="font-domine text-xs text-[#582A64] text-justify pt-1">We offer everything you want unconditionally
@@ -160,7 +160,7 @@ const Offer = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="bg-[#C3D58C] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-between" onClick={() => setOpenPackageP(true)}>
+                        <div className="bg-[#C3D58C] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-between cursor-pointer hover:scale-105 duration-300 ease-in-out" onClick={() => setOpenPackageP(true)}>
                             <div>
                                 <h1 className="text-xl font-semibold text-[#4B5F0F] font-domine">Pricing</h1>
                                 <p class="font-domine text-xs text-[#4B5F0F] text-justify pt-1">As we offer good service
@@ -171,7 +171,7 @@ const Offer = () => {
                                 <Lottie animationData={Wallet} loop={true} className="w-60" />
                             </div>
                         </div>
-                        <div className="bg-[#FDDE6E] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-between" onClick={() => setOpenContactP(true)}>
+                        <div className="bg-[#FDDE6E] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-between cursor-pointer hover:scale-105 duration-300 ease-in-out" onClick={() => setOpenContactP(true)}>
                             <div>
                                 <h1 className="text-xl font-semibold text-[#443D28] font-domine">Inbox</h1>
                                 <p class="font-domine text-xs text-[#443D28] text-justify pt-1">If you have any doubts,
@@ -182,7 +182,7 @@ const Offer = () => {
                                 <Lottie animationData={Inbox} loop={true} className="w-40" />
                             </div>
                         </div>
-                        <div className="bg-[#FCA684] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-between">
+                        <div className="bg-[#FCA684] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-between cursor-pointer hover:scale-105 duration-300 ease-in-out">
                             <Link to="/gallery">
                                 <div>
                                     <h1 className="text-xl font-semibold text-[#8E481F] font-domine">Gallery</h1>
@@ -194,7 +194,7 @@ const Offer = () => {
                                 </div>
                             </Link>
                         </div>
-                        <div className="bg-[#B6CEDA] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-center" onClick={() => setOpen(true)}>                    <div>
+                        <div className="bg-[#B6CEDA] p-4 shadow-md rounded-2xl w-11/12 h-80 flex  flex-col justify-center cursor-pointer hover:scale-105 duration-300 ease-in-out" onClick={() => setOpen(true)}>                    <div>
                             <h1 className="text-3xl text-center font-semibold text-[#52215E] font-domine">Book Now</h1>
 
                         </div>
