@@ -4,6 +4,25 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Contact = () => {
+
+    const handleEmail = () => {
+        const email = 'nimalsembakuttige@hotmail.com';
+        const subject = 'Hello Nimal';
+        const mailToLink = `mailto:${email}?subject=${subject}`;
+        window.location.href = mailToLink;
+    }
+
+    const copyText = (text) => {
+        const textArea = document.createElement("textarea");
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        textArea.remove();
+        alert("Text copied to clipboard");
+
+    }
+
     return (
         <>
             <section id="contact">
@@ -24,34 +43,22 @@ const Contact = () => {
                     </div>
                     <div className="lg:w-auto lg:h-96 lg:flex md:w-auto flex-col justify-center w-full">
                         <h1 className="text-3xl font-bold font-istok text-title text-left p-1">Contact Us</h1>
-                        <h2 className="lg:text-lg text-sm pl-2 font-semibold text-common pb-1">+94 77 113 6997</h2>
-                        <h2 className="lg:text-lg text-sm pl-2 font-semibold text-common pb-1">
+                        <h2 className="lg:text-lg text-sm pl-2 font-semibold text-common pb-1 cursor-pointer transform hover:text-yellow-400 duration-300 ease-in-out" onClick={() => copyText('+94 77 113 6997')}>+94 77 113 6997</h2>
+                        <h2 className="lg:text-lg text-sm pl-2 font-semibold text-common pb-1 cursor-pointer transform hover:text-yellow-400 duration-300 ease-in-out" onClick={() => copyText('Dammissara Mawatha, 80250 Hikkaduwa, Sri Lanka')}>
                             Dammissara Mawatha,
                             <br /> 80250 Hikkaduwa, Sri Lanka
                         </h2>
-                        <h2 className="lg:text-lg text-sm pl-2 font-semibold text-common pb-1">nimalsembakuttige@hotmail.com</h2>
+                        <h2 className="lg:text-lg text-sm pl-2 font-semibold text-common pb-1 cursor-pointer transform hover:text-yellow-400 duration-300 ease-in-out" onClick={handleEmail}>nimalsembakuttige@hotmail.com</h2>
                         <div className="flex flex-row gap-4 pt-4 pb-4 pl-2">
-                            <BsInstagram size={25} style={{
-                                color: "#3f3d56",
-                                cursor: "pointer",
-                                hover: {
-                                    color: "yellow",
-                                }
-                            }} onClick={() => window.open("https://www.instagram.com/nimal.homestay/", "_blank")} />
-                            <BsFacebook size={25} style={{
-                                color: "#3f3d56",
-                                cursor: "pointer",
-                                hover: {
-                                    color: "yellow",
-                                }
-                            }} onClick={() => window.open("https://web.facebook.com/NimalHomeStay", "_blank")} />
-                            <BsTwitterX size={25} style={{
-                                color: "#3f3d56",
-                                cursor: "pointer",
-                                hover: {
-                                    color: "yellow",
-                                }
-                            }} onClick={() => window.open("https://twitter.com/intent/post?related=wordpressdotcom&text=Nimal&url=https%3A%2F%2Fnimalhomestay.wordpress.com%2Fnimal%2F", "_blank")} />
+                            <BsInstagram size={25}
+                                className="cursor-pointer text-[#3f3d56] transform hover:text-yellow-500 duration-300 ease-in-out"
+                                onClick={() => window.open("https://www.instagram.com/nimal.homestay/", "_blank")} />
+                            <BsFacebook size={25}
+                                className="cursor-pointer text-[#3f3d56] transform hover:text-yellow-500 duration-300 ease-in-out"
+                                onClick={() => window.open("https://web.facebook.com/NimalHomeStay", "_blank")} />
+                            <BsTwitterX size={25}
+                                className="cursor-pointer text-[#3f3d56] transform hover:text-yellow-500 duration-300 ease-in-out"
+                                onClick={() => window.open("https://twitter.com/intent/post?related=wordpressdotcom&text=Nimal&url=https%3A%2F%2Fnimalhomestay.wordpress.com%2Fnimal%2F", "_blank")} />
                         </div>
                     </div>
 
