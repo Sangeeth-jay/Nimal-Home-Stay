@@ -22,6 +22,8 @@ const Contact = ({ visibleContactP, onCloseContactP }) => {
         textArea.select();
         document.execCommand('copy');
         textArea.remove();
+        alert("Text copied to clipboard");
+        
     }
 
     //control this modal
