@@ -54,7 +54,7 @@ const Room = ({visibleRoomP, onCloseRoomP}) => {
         <div id='modal' className='fixed inset-0 z-30 bg-black/30 backdrop-blur-sm flex justify-center items-center overflow-hidden' onClick={handleCloseRoomP}>
 
             <div className='bg-white lg:w-8/12 md:w-10/12 w-10/12 lg:h-5/6 md:h-5/6 h-fit p-4 rounded-3xl flex flex-col gap-2 justify-center items-center '>
-                <h1 className='text-2xl font-semibold text-[#833796] font-istok'>Beyond the Luxry</h1>
+                <h1 className='text-2xl font-semibold text-[#833796] font-istok'>Beyond the Luxury</h1>
                 <div className='flex justify-center items-center w-full'>
                     <BsCaretLeftFill className='text-[#C2B1E5] hover:text-[#7b58c1] duration-200 cursor-pointer text-2xl hidden sm:block md:block lg:block' onClick={handlePrev} />
                     <div className='lg:w-9/12 md:w-10/12  lg:h-96 md:h-80 h-72 bg-slate-400 relative rounded-md'>
